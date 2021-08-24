@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
 
 const start = async () => {
 	try {
-		await mongoose.connect('mongodb://localhost:27017/pokemon', {
+		await mongoose.connect(process.env.DB_URL, {
             useCreateIndex: true,
             useNewUrlParser: true,
             useUnifiedTopology: true ,
